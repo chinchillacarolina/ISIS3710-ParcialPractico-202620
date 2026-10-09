@@ -74,7 +74,7 @@ export default function PlanDetailPage() {
               className="w-full h-96 object-cover rounded-2xl"
             />
             <p className="absolute bottom-4 left-4 bg-white text-slate-900 font-semibold rounded-full px-4 py-1">
-              📍 {plan.address}
+              <span aria-hidden="true">📍</span> {plan.address}
             </p>
           </div>
 
@@ -162,7 +162,7 @@ export default function PlanDetailPage() {
             >
               Me gustó
             </button>
-            {message && <p className="text-sm text-red-600 mt-2">{message}</p>}
+            {message && <p role="alert" className="text-sm text-red-600 mt-2">{message}</p>}
             <button className="w-full bg-blue-50 text-slate-900 rounded-xl py-3 mt-3">
               Preguntar al anfitrión
             </button>
@@ -174,7 +174,7 @@ export default function PlanDetailPage() {
 
           {/* Experiencia segura */}
           <div className="bg-blue-50 rounded-2xl p-6 mt-8">
-            <p className="font-semibold text-slate-900">🛡️ Experiencia segura y garantizada</p>
+            <p className="font-semibold text-slate-900"><span aria-hidden="true">🛡️</span> Experiencia segura y garantizada</p>
             <p className="text-sm text-slate-600 mt-2">
               Seguro de accidentes incluido para todos los participantes registrados.
             </p>

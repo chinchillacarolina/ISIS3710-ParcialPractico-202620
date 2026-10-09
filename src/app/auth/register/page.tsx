@@ -47,10 +47,11 @@ export default function RegisterPage() {
           id="username"
           type="text"
           name="username"
+          placeholder="Tu usuario"
           value={username}
           onChange={(e) => setUsername(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
         <label className="block text-sm font-semibold text-slate-700 mt-4">
@@ -63,7 +64,7 @@ export default function RegisterPage() {
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
         <label className="block text-sm font-semibold text-slate-700 mt-4">
@@ -76,7 +77,7 @@ export default function RegisterPage() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
         <label className="block text-sm font-semibold text-slate-700 mt-4">
@@ -89,10 +90,10 @@ export default function RegisterPage() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
-          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 outline-none"
+          className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 mt-1 text-black placeholder:text-slate-500 outline-none"
         />
 
-        {error && <p className="text-sm text-red-600 mt-4">{error}</p>}
+        {error && <p role="alert" className="text-sm text-red-600 mt-4">{error}</p>}
 
         <button
           type="submit"
