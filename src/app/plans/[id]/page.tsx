@@ -179,6 +179,14 @@ export default function PlanDetailPage() {
               Seguro de accidentes incluido para todos los participantes registrados.
             </p>
           </div>
+
+          {/* Equipamiento */}
+          <div className="bg-white rounded-2xl shadow p-6 mt-8">
+            <p className="font-semibold text-slate-900"><span aria-hidden="true"></span> Equipamiento</p>
+            
+            <p className="text-lg text-slate-600 mt-4">{plan.equipment.join(", ")}</p>
+            
+          </div>
         </div>
       </div>
     </div>

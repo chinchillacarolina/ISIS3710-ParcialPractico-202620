@@ -12,6 +12,7 @@ export default function NewPlanPage() {
   const [image, setImage] = useState("");
   const [name, setName] = useState("");
   const [address, setAddress] = useState("");
+  const [equipment, setEquipment] = useState("");
   const [estimatedPrice, setEstimatedPrice] = useState("");
   const [estimatedTime, setEstimatedTime] = useState("");
   const [description, setDescription] = useState("");
@@ -68,7 +69,7 @@ export default function NewPlanPage() {
             </label>
             <p className="text-xs text-slate-500">Copia el enlace de una imagen</p>
           </div>
-          <div aria-hidden="true" className="flex flex-col items-center border-2 border-dashed border-slate-300 rounded-2xl p-10 mt-3">
+          <div aria-hidden="false" className="flex flex-col items-center border-2 border-dashed border-slate-300 rounded-2xl p-10 mt-3">
             <span className="flex items-center justify-center w-12 h-12 bg-blue-100 rounded-full">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +114,7 @@ export default function NewPlanPage() {
           />
 
           {/* Dirección */}
-          <label className="block font-semibold text-slate-900 mt-8">
+          <label htmlFor="address" className="block font-semibold text-slate-900 mt-8">
             Dirección <span className="text-orange-700">*</span>
           </label>
           <input
@@ -128,7 +129,7 @@ export default function NewPlanPage() {
           {/* Precio y duración */}
           <div className="grid grid-cols-2 gap-4 mt-8">
             <div>
-              <label className="block font-semibold text-slate-900">
+              <label htmlFor="estimatedPrice" className="block font-semibold text-slate-900">
                 Precio estimado <span className="text-orange-700">*</span>
               </label>
               <input
@@ -188,6 +189,24 @@ export default function NewPlanPage() {
             value={recomendations}
             onChange={(e) => setRecomendations(e.target.value)}
             placeholder="Ej. Llevar protector solar, toalla y agua"
+            className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-500 mt-3 outline-none"
+          />
+
+
+          {/* Equipamiento */}
+          <label htmlFor="equipment" className="block font-semibold text-slate-900 mt-8">
+             Equipamiento <span className="text-orange-700">*</span>
+          </label>
+          <p className="text-sm text-slate-300 mt-1">
+            Agrega lo que los asistentes deben llevar
+          </p>
+          <input
+            id="equipment"
+            type="text"
+            name="equipment"
+            value={equipment}
+            onChange={(e) => setEquipment(e.target.value)}
+            placeholder="Ej. Chaleco salvavidas, remo y casco"
             className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-slate-900 placeholder:text-slate-500 mt-3 outline-none"
           />
 

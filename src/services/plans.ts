@@ -8,6 +8,7 @@ export type PlanSummary = {
   likes: number;
   estimatedPrice: number;
   address: string;
+  equipment: Array<string>;
   image: string;
   creator: {
     id: string;
@@ -22,6 +23,7 @@ export type Plan = {
   likes: number;
   estimatedPrice: number;
   address: string;
+  equipment: Array<string>;
   image: string;
   description: string;
   estimatedTime: number; // en minutos
